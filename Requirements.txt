@@ -1,0 +1,36 @@
+# ══════════════════════════════════════════════════════
+#  WADIH — requirements.txt
+#  Installer avec : pip install -r requirements.txt
+# ══════════════════════════════════════════════════════
+
+# Serveur web ASGI
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# Parsing multipart (upload de fichiers)
+python-multipart==0.0.9
+
+# Extraction texte PDF natif
+PyMuPDF==1.24.3
+
+# Manipulation d'images
+Pillow==10.3.0
+
+# OCR via Tesseract
+pytesseract==0.3.13
+
+# ── NOTE SYSTÈME ──
+# Tesseract doit aussi être installé sur ton OS :
+#
+#   Windows :
+#     Télécharger l'installeur officiel :
+#     https://github.com/UB-Mannheim/tesseract/wiki
+#     Puis décommenter dans main.py :
+#     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#
+#   Linux (Ubuntu/Debian) :
+#     sudo apt update
+#     sudo apt install tesseract-ocr tesseract-ocr-fra tesseract-ocr-ara
+#
+#   macOS :
+#     brew install tesseract tesseract-lang
